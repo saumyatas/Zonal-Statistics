@@ -16,5 +16,8 @@ git clone https://github.com/saumyatas/Zonal-Statistics.git
 ### 1. Extract NDVI using MODIS data at each GPS points.
 We often conduct ground survey to analyse the land use of our study area. As one of the example, I have witnessed that we often need land use of animal camera trap points collected over the period of time, in order to anlyze their migration pattern and movement analysis. This example is inspired by [Enhancing Animal Movement Analyses: Spatiotemporal Matching of Animal Positions with Remotely Sensed Data Using Google Earth Engine and R](https://www.mdpi.com/2072-4292/13/20/4154) paper. They have analyzed vegetation index and temperature index using MODIS and ERA5 data respectively on R. `MODIS` dataset have 250 meter spatial and 16 days temporal resolution, thus we can use this for closely spaced points. But as per for the temperature index, as ERA5-Land Hourly data have 11132 meter as spatial resolution, so I will use other methods to extract it. For this particular example I have used their open source [data](https://github.com/Smithsonian/SpatiotemporalMatchingOfAnimalPositionsWithRemotelySensedDataUsingGoogleEarthEngineAndR/blob/main/Data/Data.csv). 
 
+While analyzing my country data, the problem I have faced that each country have their respective timestamp format, so remember to change it before extracting pixel value.
+`ee.Date.parse('YYYY-MM-dd', datefeat)`, where datefeat is the date feature, is used to convert the format. My data was in `MM-dd-YYYY` format, so know your data before analyzing it.
+
 ### 2. Extracting mean vegetation index for each year.
 
