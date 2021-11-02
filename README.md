@@ -28,4 +28,4 @@ This example shows how one can create a database file with zonal statistics of t
 ### 3. Extract area for each LULC class using MODIS Yearly Global data.
 The dataset  used for this exaple is [MCD12Q1.006 MODIS Land Cover Type Yearly Global](https://developers.google.com/earth-engine/datasets/catalog/MODIS_006_MCD12Q1?hl=en#bands). It covers 500 meter spatial resolution and derived from six different classification schemes. I will extract the area covered by each class in our study area into land cover class type-1 according to this dataset. There are total of 17 classes in this type of land cover type covering types of forest, buitup area and water bodies.
 The resultant CSV file for the [GEE code](3_LULC_zonal/3_LULC_zonal_proportional.js) will be like this:
-![LULC_area_result](3_LULC_zonal/LULC_zonal_proportional_mah.csv)
+![LULC_area_result](3_LULC_zonal/3_result.JPG)
