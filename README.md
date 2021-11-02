@@ -14,11 +14,11 @@ git clone https://github.com/saumyatas/Zonal-Statistics.git
 2. [Extracting mean vegetation index for each year.](#extracting-mean-vegetation-index-for-each-year)
 3. [Extract area for each LULC class using MODIS Yearly Global data](3_LULC_zonal/3_LULC_zonal_proportional.js)
 
-### [Extract NDVI using MODIS data at each GPS points.](1_MODIS_NDVI/MODIS_NDVI_GEE.js) 
+### 1. Extract NDVI using MODIS data at each GPS points.[code](1_MODIS_NDVI/MODIS_NDVI_GEE.js) 
 We often conduct ground survey to analyse the land use of our study area. As one of the example, I have witnessed that we require land use of animal camera trap points collected over the period of time, in order to anlyze their migration pattern and movement analysis. This example is inspired from [Enhancing Animal Movement Analyses: Spatiotemporal Matching of Animal Positions with Remotely Sensed Data Using Google Earth Engine and R](https://www.mdpi.com/2072-4292/13/20/4154) paper. They have analyzed vegetation index and temperature index using MODIS and ERA5 data respectively on R. `MODIS` dataset have 250 meter spatial and 16 days temporal resolution (16 days time interval between the acquisition of 2 continuous images), thus we can use this for closely spaced points. But as per for the temperature index, as ERA5-Land Hourly data have 11132 meter as spatial resolution, so I will use other methods to extract it. For this particular example I have used their open source [data](https://github.com/Smithsonian/SpatiotemporalMatchingOfAnimalPositionsWithRemotelySensedDataUsingGoogleEarthEngineAndR/blob/main/Data/Data.csv). 
 
 While analyzing my country data, the problem I have faced that each country have their respective timestamp format, so remember to change it before extracting pixel value.
-`ee.Date.parse('YYYY-MM-dd', datefeat)`, where datefeat is the date feature, is used to convert it to the required format. My data was in `MM-dd-YYYY` format, so know your data before analyzing it. The gap between date-time of GPS points and raster image date to extract NDVI is not more than 16 days. As this code extract the value from the nearest date MODIS dataset. The resultant CSV file will be like this:
+`ee.Date.parse('YYYY-MM-dd', datefeat)`, where datefeat is the date feature, is used to convert it to the required format. My data was in `MM-dd-YYYY` format, so know your data before analyzing it. The gap between date-time of GPS points and raster image date to extract NDVI is not more than 16 days. As this code extract the value from the nearest date MODIS dataset. The resultant CSV file for thewill be like this:
 ![MODIS_NDVI_Result](1_MODIS_NDVI/Modis_ndvi_result.JPG)
 
 ### [Extracting mean vegetation index for each year.](2_Zonal_EVI/Zonal_EVI_GEE.js)
