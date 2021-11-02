@@ -10,11 +10,11 @@ git clone https://github.com/saumyatas/Zonal-Statistics.git
 
 ## Contents[^note]
 [^note]: You can provide your suggestion with any other examples of zonal statistics. I will update this repository with new examples in time.
-1. [Extract NDVI using MODIS data at each GPS points.](#extract-ndvi-using-modis-data-at-each-gps-points)  
-2. [Extracting mean vegetation index for each year.](#extracting-mean-vegetation-index-for-each-year)
-3. [Extract area for each LULC class using MODIS Yearly Global data.](#extract-area-for-each-lulc-class-using-modis-yearly-global-data)
+1. [Extract NDVI using MODIS data at each GPS points.](#1-extract-ndvi-using-modis-data-at-each-gps-points)  
+2. [Extracting mean vegetation index for each year.](#2-extracting-mean-vegetation-index-for-each-year)
+3. [Extract area for each LULC class using MODIS Yearly Global data.](#3-extract-area-for-each-lulc-class-using-modis-yearly-global-data)
 
-### Extract NDVI using MODIS data at each GPS points.
+### 1. Extract NDVI using MODIS data at each GPS points.
 We often conduct ground survey to analyse the land use of our study area. As one of the example, I have witnessed that we require land use of animal camera trap points collected over the period of time, in order to anlyze their migration pattern and movement analysis. This example is inspired from [Enhancing Animal Movement Analyses: Spatiotemporal Matching of Animal Positions with Remotely Sensed Data Using Google Earth Engine and R](https://www.mdpi.com/2072-4292/13/20/4154) paper. They have analyzed vegetation index and temperature index using MODIS and ERA5 data respectively on R. `MODIS` dataset have 250 meter spatial and 16 days temporal resolution (16 days time interval between the acquisition of 2 continuous images), thus we can use this for closely spaced points. But as per for the temperature index, as ERA5-Land Hourly data have 11132 meter as spatial resolution, so I will use other methods to extract it. For this particular example I have used their open source [data](https://github.com/Smithsonian/SpatiotemporalMatchingOfAnimalPositionsWithRemotelySensedDataUsingGoogleEarthEngineAndR/blob/main/Data/Data.csv). 
 
 While analyzing my country data, the problem I have faced that each country have their respective timestamp format, so remember to change it before extracting pixel value.
