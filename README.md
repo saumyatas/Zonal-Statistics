@@ -34,3 +34,16 @@ The dataset  used for this example is [MCD12Q1.006 MODIS Land Cover Type Yearly 
 
 The resultant CSV file for the [GEE code](3_LULC_zonal/3_LULC_zonal_proportional.js) will be like this:
 ![LULC_area_result](3_LULC_zonal/3_result.JPG)
+
+
+## Author
+[Saumyata Srivastava](https://www.linkedin.com/in/ss-97b05a103/)
+
+[![GitHub Saumyata Srivastava](https://img.shields.io/github/followers/saumyatas?label=follow&style=for-the-badge&logo=github&logoColor=white&labelColor=333333)](https://github.com/saumyatas)
+[![Email](https://img.shields.io/badge/Mail-004788?style=for-the-badge&logo=gmail&logoColor=white)](mailto:saumyata.srivastava@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ss-97b05a103/)
+[![kaggle](https://img.shields.io/badge/kaggle-31C3FF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/saumyatas1202)
+[![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@srivastava.saumyata)
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
