@@ -47,3 +47,4 @@ The resultant CSV file for the [GEE code](3_LULC_zonal/3_LULC_zonal_proportional
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
