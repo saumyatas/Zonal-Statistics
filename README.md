@@ -13,6 +13,7 @@ git clone https://github.com/saumyatas/Zonal-Statistics.git
 1. [Extract NDVI using MODIS data at each GPS points.](#1-extract-ndvi-using-modis-data-at-each-gps-points)  
 2. [Extracting mean vegetation index for each year.](#2-extracting-mean-vegetation-index-for-each-year)
 3. [Extract area for each LULC class using MODIS Yearly Global data.](#3-extract-area-for-each-lulc-class-using-modis-yearly-global-data)
+4. [Extracting Land Surface Temperature at each GPS points.](#4-extracting-land-surface-temperature-at-each-gps-points)
 
 ### 1. Extract NDVI using MODIS data at each GPS points.
 We often conduct ground survey to analyse the land use of our study area. As one of the example, I have witnessed that we require land use of animal camera trap points collected over the period of time, in order to anlyze their migration pattern and movement analysis. This example is inspired from [Enhancing Animal Movement Analyses: Spatiotemporal Matching of Animal Positions with Remotely Sensed Data Using Google Earth Engine and R](https://www.mdpi.com/2072-4292/13/20/4154) paper. They have analyzed vegetation index and temperature index using MODIS and ERA5 data respectively on R. `MODIS` dataset have 250 meter spatial and 16 days temporal resolution (16 days time interval between the acquisition of 2 continuous images), thus we can use this for closely spaced points. But as per for the temperature index, as ERA5-Land Hourly data have 11132 meter as spatial resolution, so I will use other methods to extract it. For this particular example I have used their open source [data](https://github.com/Smithsonian/SpatiotemporalMatchingOfAnimalPositionsWithRemotelySensedDataUsingGoogleEarthEngineAndR/blob/main/Data/Data.csv). 
@@ -35,6 +36,11 @@ The dataset  used for this example is [MCD12Q1.006 MODIS Land Cover Type Yearly 
 The resultant CSV file for the [GEE code](3_LULC_zonal/3_LULC_zonal_proportional.js) will be like this:
 ![LULC_area_result](3_LULC_zonal/3_result.JPG)
 
+### 4. Extracting Land Surface Temperature at each GPS points.
+The ground surveys are conducted to analyze the movement of wildlife, which are generally carried out on a 1km x 1km grid. And in order to understand the behavior of animals movement, different environmental parameters are extracted from the time series satellite dataset. This example shows how users can extract Land Surface Temperature (LST) at 1 km spatial resolution using [MOD11A2.006 Terra Land Surface Temperature and Emissivity 8-Day Global 1km](https://developers.google.com/earth-engine/datasets/catalog/MODIS_006_MOD11A2) dataset. I have used an open source [data](https://github.com/Smithsonian/SpatiotemporalMatchingOfAnimalPositionsWithRemotelySensedDataUsingGoogleEarthEngineAndR/blob/main/Data/Data.csv). you can use any GPS csv file with latitude, longituge and time of data capture. 
+
+The resultant CSV file for the [GEE code](4_MODIS_LST/4_MODIS_LST .js) will be like this:
+![LULC_area_result](4_MODIS_LST/4_result.JPG)
 
 ## Author
 [Saumyata Srivastava](https://www.linkedin.com/in/ss-97b05a103/)
